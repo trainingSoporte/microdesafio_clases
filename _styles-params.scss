@@ -1,0 +1,128 @@
+$font-famyly-montserrat: 'Montserrat',
+sans-serif;
+$font-weight-montserrat-bold: 700;
+$font-famyly-roboto: 'Roboto',
+sans-serif;
+$font-weight-roboto-regular: 400;
+$font-weight-roboto-medium: 500;
+$font-weight-roboto-bold: 700;
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    // background: red;
+    position: relative;
+    .cardImage {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .cardContent {
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        opacity: 0.7;
+        background: #572EE5;
+        //z-index: 100;
+        .cardButtons {
+            // background: white;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            div {
+                width: 32px;
+                height: 32px;
+                background: #FFFFFF;
+                border-radius: 6px;
+            }
+            .trash {
+                background-image: url(../images/icon-trash-normal.svg);
+                &:hover {
+                    background-image: url(../images/icon-trash-hover.svg);
+                }
+            }
+            .fav {
+                background-image: url(../images/icon-fav.svg);
+                &:hover {
+                    background-image: url(../images/icon-fav-hover.svg);
+                }
+                &.actived {
+                    background-image: url(../images/icon-fav-active.svg);
+                    background-repeat: no-repeat;
+                    background-size: 58%;
+                    background-position: 50% 50%;
+                }
+            }
+            .down {
+                background-image: url(../images/icon-download.svg);
+                &:hover {
+                    background-image: url(../images/icon-download-hover.svg);
+                }
+            }
+            .max {
+                background-image: url(../images/icon-max-normal.svg);
+                &:hover {
+                    background-image: url(../images/icon-max-hover.svg);
+                }
+            }
+        }
+        .cardInfo {
+            // background: blue;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .infoUser {
+                // background: yellow;
+                font-family: $font-famyly-roboto;
+                font-weight: $font-weight-roboto-regular;
+                font-size: 15px;
+                color: #FFFFFF;
+            }
+            .infoTitle {
+                // background: yellowgreen;
+                font-family: $font-famyly-roboto;
+                font-weight: $font-weight-roboto-bold;
+                font-size: 16px;
+                color: #FFFFFF;
+            }
+        }
+    }
+    &:hover {
+        .cardContent {
+            z-index: 1;
+        }
+    }
+}
+
+.cardInactive {
+    display: none;
+}
+
+.cardActive {
+    display: block;
+}
+
+.cardObject {
+    width: 243px;
+    height: 187px;
+    // .cardContent {
+    //     .cardButtons {
+    //         .trash {
+    //             display: none;
+    //         }
+    //     }
+    // }
+}
