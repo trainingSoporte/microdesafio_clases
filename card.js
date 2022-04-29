@@ -233,3 +233,52 @@ class Card {
 }
 
 // module.exports = {Card};
+
+
+// Cards Container
+
+class CardsContainer{
+
+    constructor(cantCards){
+
+        this.properties = {
+            cantCards : cantCards,
+            containerStyles:'cardsContainer'
+        }
+
+        this.cardsContainer = [];
+        
+    }
+
+    setProperties(properties){
+        this.properties = Object.assign(this.properties,properties);
+    }
+
+    getProperties(){
+        return this.properties;
+    }
+
+    setCards(cardsDetails){
+
+        cardsDetails.forEach((cardDetails) =>{
+            this.cardsContainer.push(new Card(cardDetails)); 
+        });
+
+        this.properties.cantCards = cardsDetails.length;
+           
+    }
+
+    getCardsContainer(){
+        
+        let container = document.createElement('div');
+        container.classList.add(this.properties.containerStyles);
+        this.cardsContainer.forEach((card)=>{
+            container.append(card.getCard());
+        });
+
+        return container;
+
+
+    }
+
+}
