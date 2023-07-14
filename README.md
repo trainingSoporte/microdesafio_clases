@@ -17,6 +17,13 @@ _Instala GIT en tu host local_
 https://git-scm.com/downloads
 ```
 
+_Instala NodeJS en tu host local_
+
+```
+https://nodejs.org/en
+
+```
+
 ### Instalación 🔧
 
 _Pasos:_
@@ -45,5 +52,17 @@ _4 Ejecuta el siguiente comando:_
 
 ```
 git clone https://github.com/trainingSoporte/microdesafio_clases.git
+
+```
+
+_5 Ejecuta el siguiente comando:_
+```
+npm install
+
+```
+
+_6 Ejecuta el siguiente comando:_
+```
+npm run start
 
 ```

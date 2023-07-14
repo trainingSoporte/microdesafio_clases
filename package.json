@@ -1,0 +1,15 @@
+{
+  "name": "microdesafio_clases",
+  "version": "1.0.0",
+  "description": "_Aplicacion de Training_",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Adrian Ojeda",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
